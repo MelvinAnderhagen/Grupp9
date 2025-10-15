@@ -15,8 +15,8 @@
 
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    /* padding: 0;
+    margin: 0; */
 }
 
 .mainContainer {
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 50px;
 }
 
 .bookCard {
@@ -51,6 +51,7 @@
     border-radius: 60px;
     width: 380px;
     height: 700px;
+    margin-bottom: 35px;
 }
 
 .bookImage {
