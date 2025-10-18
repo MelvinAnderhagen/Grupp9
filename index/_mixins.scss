@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+@mixin cards {
+    
+}
+
+@mixin button {
+    background-color: $button-color;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 50px;
+    cursor: pointer;
+    border: 2px solid $border-button-color;
+}
+
+@mixin button-hover {
+    background-color: $hover-button-color;
+    border: 2px solid $hover-border-button-color;
+}

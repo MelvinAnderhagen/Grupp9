@@ -1,0 +1,82 @@
+.bodyContainer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.mainContainer {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "books" "events";
+  grid-gap: 35px;
+}
+
+.bookSection {
+  grid-area: books;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 75px;
+}
+.bookSection article {
+  border: 1px solid gray;
+  border-radius: 5%;
+}
+.bookSection article img {
+  display: block;
+  margin: 0 auto;
+  max-height: 80%;
+  max-width: 100%;
+  min-width: 100%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  z-index: -1;
+}
+.bookSection article h2 {
+  margin-left: 20px;
+}
+.bookSection article p {
+  margin-left: 22px;
+}
+
+.eventSection {
+  grid-area: events;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 75px;
+}
+.eventSection article {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 1px solid gray;
+  border-radius: 5%;
+  padding: 16px;
+}
+.eventSection article button {
+  background-color: #FFBEEF;
+  border-radius: 25px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 50px;
+  cursor: pointer;
+  border: 2px solid #9c8697;
+}
+.eventSection article button:hover {
+  background-color: #ff8d8d;
+  border: 2px solid #000000;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/*# sourceMappingURL=index.css.map */
