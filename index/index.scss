@@ -1,6 +1,28 @@
 @use 'variables' as *;
 @use 'mixins';
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: #b81e3b;
+}
+
+.logo {
+    margin-left: 25px;
+}
+
+.navbar {
+    margin-right: 25px;
+}
+
+.footer {
+    background-color: #b81e3b;
+}
+
 .bodyContainer {
     display: grid;
     grid-template-columns: auto;
@@ -24,6 +46,7 @@
     'books'
     'events';
     grid-gap: 35px;
+    flex-wrap: wrap;
 }
 
 .bookSection {
@@ -31,11 +54,14 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    height: 750px;
     gap: 75px;
 
     article {
-        border: 1px solid gray;
-        border-radius: 5%;
+        border-radius: 15px;
+        height: 750px;
+        width: 400px;
+        border: 0.1rem solid rgba(128, 128, 128, 0.158);
 
         img {
             display: block;
@@ -43,17 +69,23 @@
             max-height: 80%;
             max-width: 100%;
             min-width: 100%;
-            border-top-left-radius: 5%;
-            border-top-right-radius: 5%;
+            border-top-left-radius: 13px;
+            border-top-right-radius: 13px;
             z-index: -1;
         }
 
         h2 {
             margin-left: 20px;
+            font-size: $heading1;
+            font-weight: $primary-font-weight;
+            color: $primary-text-color;
         }
 
         p {
             margin-left: 22px;
+            font-size: $paragraph;
+            color: $secondary-text-color;
+            font-weight: $secondary-font-weight;
         }
     }
 }
@@ -63,16 +95,48 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 75px;
 
     article {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        border: 1px solid gray;
-        border-radius: 5%;
-        padding: 16px;
+        align-items: baseline;
+        border-radius: 15px;
+        padding: 15px;
+        gap: 10px;
+        border: 0.1rem solid rgba(128, 128, 128, 0.158);
 
+        h2 {
+            font-weight: $primary-font-weight;
+        }
+
+        p {
+            color: $secondary-text-color;
+            font-weight: $secondary-font-weight;
+            a {
+                text-decoration: none;
+                color: $secondary-text-color;
+
+            }
+        }
+
+        .eventTitle {
+
+        }
+
+        .eventDate {
+            margin-bottom: 15px;
+        }
+
+        .eventDesc {
+            margin-bottom: 15px;
+            font-weight: 500;
+            font-size: 16px;
+            color: $primary-text-color;
+        }
+        
         button {
             @include mixins.button();
         }
@@ -85,4 +149,16 @@
 
 .footer {
     grid-area: footer;
+}
+
+@media (max-width: 800px) {
+    .eventSection {
+        height: auto;
+        width: auto;
+    }
+
+    .bookSection {
+        height: auto;
+        width: auto;
+    }
 }

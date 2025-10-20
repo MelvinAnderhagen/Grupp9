@@ -1,3 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: #b81e3b;
+}
+
+.logo {
+  margin-left: 25px;
+}
+
+.navbar {
+  margin-right: 25px;
+}
+
+.footer {
+  background-color: #b81e3b;
+}
+
 .bodyContainer {
   display: grid;
   grid-template-columns: auto;
@@ -16,6 +38,7 @@
   grid-template-rows: auto auto;
   grid-template-areas: "books" "events";
   grid-gap: 35px;
+  flex-wrap: wrap;
 }
 
 .bookSection {
@@ -23,11 +46,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  height: 750px;
   gap: 75px;
 }
 .bookSection article {
-  border: 1px solid gray;
-  border-radius: 5%;
+  border-radius: 15px;
+  height: 750px;
+  width: 400px;
+  border: 0.1rem solid rgba(128, 128, 128, 0.158);
 }
 .bookSection article img {
   display: block;
@@ -35,15 +61,21 @@
   max-height: 80%;
   max-width: 100%;
   min-width: 100%;
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
   z-index: -1;
 }
 .bookSection article h2 {
   margin-left: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  color: black;
 }
 .bookSection article p {
   margin-left: 22px;
+  font-size: 16px;
+  color: rgb(43, 43, 43);
+  font-weight: 400;
 }
 
 .eventSection {
@@ -51,22 +83,44 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 75px;
 }
 .eventSection article {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  border: 1px solid gray;
-  border-radius: 5%;
-  padding: 16px;
+  align-items: baseline;
+  border-radius: 15px;
+  padding: 15px;
+  gap: 10px;
+  border: 0.1rem solid rgba(128, 128, 128, 0.158);
+}
+.eventSection article h2 {
+  font-weight: 600;
+}
+.eventSection article p {
+  color: rgb(43, 43, 43);
+  font-weight: 400;
+}
+.eventSection article p a {
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+}
+.eventSection article .eventDate {
+  margin-bottom: 15px;
+}
+.eventSection article .eventDesc {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
 }
 .eventSection article button {
   background-color: #FFBEEF;
   border-radius: 25px;
   display: block;
-  margin: 0 auto;
-  padding: 15px 50px;
+  padding: 15px 75px;
   cursor: pointer;
   border: 2px solid #9c8697;
 }
@@ -77,6 +131,17 @@
 
 .footer {
   grid-area: footer;
+}
+
+@media (max-width: 800px) {
+  .eventSection {
+    height: auto;
+    width: auto;
+  }
+  .bookSection {
+    height: auto;
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

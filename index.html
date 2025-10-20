@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/index/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Pärmar och Poesi</title>
 </head>
-<body class="bodyContainer">
-    <header class="header">
-        <h1 class="headerLogo">
-            <a class="logoLink" href="index.html">Pärmar och Poesi</a>
+<body class="flex flex-col gap-6">
+    <header class="header flex flex-row justify-between items-center h-20">
+        <h1 class="text-3xl font-semibold logo">
+            <a class="text-white hover:text-gray-400" href="index.html">Pärmar och Poesi</a>
         </h1>
-        <nav class="navMenu">
-            <a class="navMenuItem" href="books.html">Böcker</a>
-            <a class="navMenuItem" href="events.html">Evenemang</a>
-            <a class="navMenuItem" href="about.html">Om oss</a>
+        <nav class="flex flex-row gap-5 navbar text-xl">
+            <a class="text-white hover:text-gray-300 hover:underline" href="books.html">Böcker</a>
+            <a class="text-white hover:text-gray-300 hover:underline" href="events.html">Evenemang</a>
+            <a class="text-white hover:text-gray-300 hover:underline" href="about.html">Om oss</a>
         </nav>
     </header>
-    
-    <main class="mainContainer">
+    <main class="">
         <section class="bookSection">
             <article class="bookCard">
                 <img class="bookImage" src="/images/klanen.jpg" alt="Bild på bokomslaget Klanen">
@@ -61,23 +61,25 @@
             </article>
         </section>
     </main>
-    <footer class="footer">
-        <section class="footerLogo">
-            <a class="footerLogoLink" href="index.html">Pärmar och Poesi</a>
+    <footer class="footer flex flex-row justify-evenly items-center h-44">
+        <section class="">
+            <a class="font-semibold text-2xl text-white" href="index.html">Pärmar och Poesi</a>
         </section>
-        <section class="linkSection">
-            <p class="linkTitle">Länkar</p>
-            <ul class="linkTree">
-                <li class="linkTreeItem"><a class="footerLinks" href="books.html">Böcker</a></li>
-                <li class="linkTreeItem"><a class="footerLinks" href="events.html">Evenemang</a></li>
-                <li class="linkTreeItem"><a class="footerLinks" href="about.html">Om oss</a></li>
+        <section class="flex flex-col gap-2">
+            <p class="font-semibold text-white text-xl">Länkar</p>
+            <ul class="">
+                <li class=""><a class="text-gray-300 text-lg" href="books.html">Böcker</a></li>
+                <li class=""><a class="text-gray-300 text-lg" href="events.html">Evenemang</a></li>
+                <li class=""><a class="text-gray-300 text-lg" href="about.html">Om oss</a></li>
             </ul>
         </section>
-        <section class="socialSection">
-            <p class="socialMediaTitle">Sociala medier</p>
-            <p class="socialMediaIcons"><i class="fa-brands fa-facebook-f"></i></p>
-            <p class="socialMediaIcons"><i class="fa-brands fa-instagram"></i></p>
-            <p class="socialMediaIcons"><i class="fa-brands fa-twitter"></i></p>
+        <section class="flex flex-col gap-2">
+            <p class="text-white font-semibold text-xl">Sociala medier</p>
+            <section class="flex flex-row gap-2">
+                <p class="socialMediaIcons text-gray-300 text-lg"><i class="fa-brands fa-facebook-f"></i></p>
+                <p class="socialMediaIcons text-gray-300 text-lg"><i class="fa-brands fa-instagram"></i></p>
+                <p class="socialMediaIcons text-gray-300 text-lg"><i class="fa-brands fa-twitter"></i></p>
+            </section>
         </section>
     </footer>
 </body>
