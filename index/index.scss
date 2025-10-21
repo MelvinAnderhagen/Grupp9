@@ -1,5 +1,6 @@
 @use 'variables' as *;
 @use 'mixins';
+@import url(/components/components.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -7,22 +8,6 @@
     padding: 0;
     margin: 0;
     font-family: "Nato Sans", sans-serif;
-}
-
-.header {
-    background-color: #b81e3b;
-}
-
-.logo {
-    margin-left: 25px;
-}
-
-.navbar {
-    margin-right: 25px;
-}
-
-.footer {
-    background-color: #b81e3b;
 }
 
 .bodyContainer {
@@ -33,10 +18,6 @@
         "header"
         "main"
         "footer";
-}
-
-.header {
-    grid-area: header;
 }
 
 .mainContainer {
