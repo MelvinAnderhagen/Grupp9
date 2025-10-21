@@ -5,21 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/index/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Pärmar och Poesi</title>
 </head>
 <body class="flex flex-col gap-6">
-    <header class="header flex flex-row justify-between items-center h-20">
-        <h1 class="text-3xl font-semibold logo">
-            <a class="text-white hover:text-gray-400" href="index.html">Pärmar och Poesi</a>
-        </h1>
-        <nav class="flex flex-row gap-5 navbar text-xl">
-            <a class="text-white hover:text-gray-300 hover:underline navBarItems" href="books.html">Böcker</a>
-            <a class="text-white hover:text-gray-300 hover:underline navBarItems" href="events.html">Evenemang</a>
-            <a class="text-white hover:text-gray-300 hover:underline navBarItems" href="about.html">Om oss</a>
-            <a class="text-white hover:text-gray-300 hover:underline hamburgerMenu" href=""><i class="fa-solid fa-bars"></i></a>
-        </nav>
-    </header>
+    <header class="bg-[#b81e3b] flex justify-between items-center h-20 px-6">
+  <h1 class="text-3xl font-semibold">
+    <a href="index.html" class="text-white hover:text-gray-300 transition">Pärmar och Poesi</a>
+  </h1>
+
+  <!-- Mobile menu toggle -->
+  <nav class="relative">
+    <input type="checkbox" id="menu-toggle" class="hidden peer" />
+    <label for="menu-toggle" class="text-white text-2xl cursor-pointer md:hidden hover:text-gray-300 transition">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <!-- Menu -->
+    <ul
+      class="peer-checked:flex hidden absolute md:static right-0 top-12 md:top-auto bg-[#b81e3b] md:bg-transparent flex-col md:flex-row md:flex gap-5 text-xl rounded-lg md:rounded-none shadow-md md:shadow-none p-4 md:p-0"
+    >
+      <li><a href="books.html" class="text-white hover:text-gray-300 hover:underline transition">Böcker</a></li>
+      <li><a href="events.html" class="text-white hover:text-gray-300 hover:underline transition">Evenemang</a></li>
+      <li><a href="about.html" class="text-white hover:text-gray-300 hover:underline transition">Om oss</a></li>
+    </ul>
+  </nav>
+</header>
+
     <main class="mainContainer">
         <h1 class="bookSectionTitle">Månadens böcker</h1>
         <section class="bookSection">
@@ -65,24 +77,24 @@
         </section>
     </main>
 
-    <footer class="footer flex flex-row justify-evenly items-center h-44 flex-wrap">
+    <footer class="footer bg-[#b81e3b] flex flex-row justify-evenly items-center h-44 flex-wrap">
         <section class="">
             <a class="font-semibold text-2xl text-white" href="index.html">Pärmar och Poesi</a>
         </section>
         <section class="flex flex-col gap-2 flex-wrap">
             <p class="font-semibold text-white text-xl">Länkar</p>
             <ul class="">
-                <li class=""><a class="text-gray-300 text-lg" href="books.html">Böcker</a></li>
-                <li class=""><a class="text-gray-300 text-lg" href="events.html">Evenemang</a></li>
-                <li class=""><a class="text-gray-300 text-lg" href="about.html">Om oss</a></li>
+                <li class=""><a class="text-gray-300 text-lg hover:text-gray-700" href="books.html">Böcker</a></li>
+                <li class=""><a class="text-gray-300 text-lg hover:text-gray-700" href="events.html">Evenemang</a></li>
+                <li class=""><a class="text-gray-300 text-lg hover:text-gray-700" href="about.html">Om oss</a></li>
             </ul>
         </section>
         <section class="flex flex-col gap-2 flex-wrap">
             <p class="text-white font-semibold text-xl">Sociala medier</p>
             <section class="flex flex-row gap-2">
-                <p class="socialMediaIcons text-gray-300 text-lg"><i class="fa-brands fa-facebook-f"></i></p>
-                <p class="socialMediaIcons text-gray-300 text-lg"><i class="fa-brands fa-instagram"></i></p>
-                <p class="socialMediaIcons text-gray-300 text-lg"><i class="fa-brands fa-twitter"></i></p>
+                <p class="socialMediaIcons text-gray-300 text-lg hover:text-gray-700 cursor-pointer"><i class="fa-brands fa-facebook-f"></i></p>
+                <p class="socialMediaIcons text-gray-300 text-lg hover:text-gray-700 cursor-pointer"><i class="fa-brands fa-instagram"></i></p>
+                <p class="socialMediaIcons text-gray-300 text-lg hover:text-gray-700 cursor-pointer"><i class="fa-brands fa-twitter"></i></p>
             </section>
         </section>
     </footer>
