@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Nato Sans", sans-serif;
 }
 
 .header {
@@ -35,10 +37,16 @@
   grid-area: main;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  grid-template-areas: "books" "events";
-  grid-gap: 35px;
-  flex-wrap: wrap;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "bookTitle" "books" "eventTitle" "events";
+  grid-gap: 25px;
+  text-align: center;
+}
+
+.bookSectionTitle {
+  grid-area: bookTitle;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .bookSection {
@@ -46,13 +54,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  height: 750px;
   gap: 75px;
 }
 .bookSection article {
   border-radius: 15px;
-  height: 750px;
-  width: 400px;
   border: 0.1rem solid rgba(128, 128, 128, 0.158);
 }
 .bookSection article img {
@@ -66,16 +71,20 @@
   z-index: -1;
 }
 .bookSection article h2 {
-  margin-left: 20px;
   font-size: 26px;
   font-weight: 600;
   color: black;
 }
 .bookSection article p {
-  margin-left: 22px;
   font-size: 16px;
   color: rgb(43, 43, 43);
   font-weight: 400;
+}
+
+.eventSectionTitle {
+  grid-area: eventTitle;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .eventSection {
@@ -84,7 +93,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 75px;
+  gap: 45px;
 }
 .eventSection article {
   display: flex;
@@ -97,7 +106,9 @@
   border: 0.1rem solid rgba(128, 128, 128, 0.158);
 }
 .eventSection article h2 {
-  font-weight: 600;
+  color: #b81e3b;
+  font-size: 18px;
+  font-weight: bold;
 }
 .eventSection article p {
   color: rgb(43, 43, 43);
@@ -116,17 +127,21 @@
   font-size: 16px;
   color: black;
 }
+.eventSection article .eventLocation {
+  margin: 10px 0;
+}
 .eventSection article button {
-  background-color: #FFBEEF;
-  border-radius: 25px;
-  display: block;
-  padding: 15px 75px;
+  background-color: #b81e3b;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 0;
   cursor: pointer;
-  border: 2px solid #9c8697;
 }
 .eventSection article button:hover {
   background-color: #ff8d8d;
-  border: 2px solid #000000;
 }
 
 .footer {
