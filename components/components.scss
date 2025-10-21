@@ -11,6 +11,21 @@
   margin-right: 25px;
 }
 
+.hamburgerMenu {
+  display: none;
+}
+
 .footer {
+  grid-area: footer;
   background-color: #b81e3b;
+}
+
+@media (max-width: 800px) {
+    .navBarItems {
+      display: none;
+    }
+
+    .hamburgerMenu {
+      display: block;
+    }
 }
