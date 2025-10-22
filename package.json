@@ -18,4 +18,7 @@
     "url": "https://github.com/MelvinAnderhagen/Grupp9/issues"
   },
   "homepage": "https://github.com/MelvinAnderhagen/Grupp9#readme"
+  "dependencies": {
+    "tailwindcss": "^4.1.14"
+  }
 }

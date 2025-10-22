@@ -1,0 +1,141 @@
+@import url(/components/components.css);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Nato Sans", sans-serif;
+}
+
+.bodyContainer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.mainContainer {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "bookTitle" "books" "eventTitle" "events";
+  grid-gap: 25px;
+  text-align: center;
+}
+
+.bookSectionTitle {
+  grid-area: bookTitle;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.bookSection {
+  grid-area: books;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 75px;
+}
+.bookSection article {
+  border-radius: 15px;
+  border: 0.1rem solid rgba(128, 128, 128, 0.158);
+}
+.bookSection article img {
+  display: block;
+  margin: 0 auto;
+  max-height: 80%;
+  max-width: 100%;
+  min-width: 100%;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  z-index: -1;
+}
+.bookSection article h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: black;
+}
+.bookSection article p {
+  font-size: 16px;
+  color: rgb(43, 43, 43);
+  font-weight: 400;
+}
+
+.eventSectionTitle {
+  grid-area: eventTitle;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.eventSection {
+  grid-area: events;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+}
+.eventSection article {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: baseline;
+  border-radius: 15px;
+  padding: 15px;
+  gap: 10px;
+  border: 0.1rem solid rgba(128, 128, 128, 0.158);
+}
+.eventSection article h2 {
+  color: #b81e3b;
+  font-size: 18px;
+  font-weight: bold;
+}
+.eventSection article p {
+  color: rgb(43, 43, 43);
+  font-weight: 400;
+}
+.eventSection article p a {
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+}
+.eventSection article .eventDate {
+  margin-bottom: 15px;
+}
+.eventSection article .eventDesc {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+}
+.eventSection article .eventLocation {
+  margin: 10px 0;
+}
+.eventSection article button {
+  background-color: #b81e3b;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.eventSection article button:hover {
+  background-color: #ff8d8d;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media (max-width: 800px) {
+  .eventSection {
+    height: auto;
+    width: auto;
+  }
+  .bookSection {
+    height: auto;
+    width: auto;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

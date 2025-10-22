@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.6;
+    background-color: #fff6f8;
+    color: #333;
+  }
+  
+  .header {
+    background-color: #b81e3b;
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .headerLogo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1rem;
+  }
+  
+  .headerLogo a:hover {
+    color: #ffdce5;
+  }
+  
+  .navMenu {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  .navMenuItem {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navMenuItem:hover,
+  .navMenuItem.active {
+    color: #ffdce5;
+  }
+  
+  .eventHead {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #ffe6ec;
+  }
+  
+  .eventHead .eventTitle {
+    color: #b81e3b;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .eventHead .eventBg {
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .eventSection {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .eventCard {
+    background-color: #fff;
+    border: 1px solid #f3c1cc;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .eventCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .eventName {
+    font-size: 1.3rem;
+    color: #b81e3b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .eventDate,
+  .eventLocation {
+    font-size: 0.95rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.2rem 0;
+  }
+  
+  .eventDesc {
+    margin: 0.8rem 0 1.2rem 0;
+    color: #444;
+  }
+  
+  .eventBtn {
+    background-color: #b81e3b;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .eventBtn:hover {
+    background-color: #931831;
+  }
+  
+  .footer {
+    background-color: #b81e3b;
+    color: #fff;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footerLogoLink {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .footerLogoLink:hover {
+    color: #ffdce5;
+  }
+  
+  .linkTree {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footerLinks {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footerLinks:hover {
+    color: #ffdce5;
+  }
+  
+  .socialSection p {
+    margin: 0.3rem 0;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .eventSection {
+      grid-template-columns: 1fr;
+    }
+  
+    .navMenu {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+  
