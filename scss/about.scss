@@ -11,7 +11,7 @@ body {
   padding: 0;
 }
 
-/* Prevent images from overflowing their containers */
+
 img {
   max-width: 100%;
   height: auto;
@@ -28,18 +28,18 @@ img {
   border: 0; padding: 0; margin: -1px;
 }
 
-/* only apply dark background to site header and footer, not to content headers like .history-hero */
+
 .site-header, .footer {
   background-color: $color-text;
   color: #fff;
 }
 
-/* Make top header sticky and ensure it sits above page content */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 40;
-  min-height: 5.2rem; /* give a bit more vertical space */
+  min-height: 5.2rem; 
   display: flex;
   align-items: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -52,7 +52,7 @@ main {
 }
 
 section {
-  margin-bottom: 3.6rem; /* more breathing room between sections */
+  margin-bottom: 3.6rem; 
   background-color: $color-accent;
   padding: $padding-section;
   border-radius: $border-radius;
@@ -62,7 +62,7 @@ section {
 section h2 { color: $color-text; margin-bottom: 1rem; }
 section p { color: #0a0a0a; margin-bottom: 1rem; }
 
-/* Make the figure responsive: stack on small screens, two-column (text left, image right) on larger screens */
+
 figure {
   display: grid;
   grid-template-columns: 1fr;
@@ -70,25 +70,24 @@ figure {
   align-items: center;
 }
 
-/* Larger screens: text left, image right */
+
 @media (min-width: 720px) {
   figure {
     grid-template-columns: 1fr 320px;
   }
   figure img {
-    justify-self: end; /* push image to the right column */
+    justify-self: end; 
     max-width: 320px;
     width: 100%;
     border-radius: $border-radius;
     object-fit: cover;
-    transform: translateX(8px); /* nudge a bit to the right */
+    transform: translateX(8px); 
   }
   figure figcaption {
     text-align: left;
   }
 }
 
-/* Small screens: stacked center */
 figure img {
   max-width: 300px;
   width: 100%;
@@ -108,12 +107,11 @@ figure figcaption { text-align: center; color: #0a0a0a; }
   .team-list { grid-template-columns: 1fr; }
 }
 
-/* History section: h2 full width, text + image form columns on larger screens */
 .history {
   max-width: 1200px;
   margin: 0 auto;
   padding: $padding-section;
-  text-align: center; /* Center everything by default */
+  text-align: center; 
 }
 
 .history h2 { 
@@ -122,17 +120,17 @@ figure figcaption { text-align: center; color: #0a0a0a; }
   grid-column: 1 / -1; 
 }
 
-/* Hero section styling */
+
 .history-hero {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   align-items: start;
-  justify-items: start; /* Align items to the left */
+  justify-items: start; 
   margin-bottom: 3rem;
 
   .hero-text {
-    text-align: left; /* Left-align text */
+    text-align: left; 
   }
 
   h1, h2 {
@@ -144,16 +142,16 @@ figure figcaption { text-align: center; color: #0a0a0a; }
   }
 
   .tagline { 
-    margin: 0 0 2rem 0; /* Add margin bottom to create space before image */
+    margin: 0 0 2rem 0; 
     color: $color-text; 
     opacity: 0.95; 
-    font-weight: 600; /* Semi-bold */
+    font-weight: 600; 
   }
 
   .history-image {
     max-width: 480px;
     width: 100%;
-    justify-self: start; /* Align image to the left */
+    justify-self: start; 
     
     img { 
       display: block; 
@@ -164,32 +162,32 @@ figure figcaption { text-align: center; color: #0a0a0a; }
   }
 }
 
-/* Desktop: keep left alignment, just adjust sizing */
+
 @media (min-width: 720px) {
   .history-hero {
-    max-width: none; /* Remove width constraint */
-    margin: 0 0 3rem 0; /* Remove auto centering */
+    max-width: none;
+    margin: 0 0 3rem 0; 
     
     .hero-text {
-      text-align: left; /* Keep left alignment */
-      max-width: 600px; /* Constrain text width for readability */
-    }
+      text-align: left; 
+      max-width: 600px;
+    
     
     .history-image {
-      max-width: 520px; /* Larger on desktop */
-      justify-self: start; /* Keep left alignment */
+      max-width: 520px; 
+      justify-self: start; 
     }
   }
 }
 
-/* Main history content */
+
 .history-text {
   max-width: 900px;
   margin: 0 auto;
-  text-align: left; /* Left-align the text content */
+  text-align: left; 
 }
 
-/* Larger screens: slightly bigger image, maintain left alignment */
+
 @media (min-width: 880px) {
   .history-hero {
     .hero-text {
@@ -202,7 +200,6 @@ figure figcaption { text-align: center; color: #0a0a0a; }
   }
 }
 
-/* Very wide screens: maximum size, maintain left alignment */
 @media (min-width: 1100px) {
   .history-hero {
     .hero-text {
@@ -215,21 +212,19 @@ figure figcaption { text-align: center; color: #0a0a0a; }
   }
 }
 
-/* Blockquote visual update: slightly darker border and deeper rose tint, author line bolder and different font-weight */
 blockquote {
   background: linear-gradient(180deg, rgba(184,30,59,0.06), rgba(0,0,0,0.02));
-  border: 1px solid rgba(184,30,59,0.14); /* slightly darker rose border */
+  border: 1px solid rgba(184,30,59,0.14);
 }
 
 blockquote footer {
   margin-top: 1rem;
   text-align: right;
-  font-weight: 800; /* bolder author */
-  color: $color-text; /* use same rose color for author */
+  font-weight: 800;
+  color: $color-text;
   font-family: $font-main;
 }
 
-/* Blockquote / quote styling */
 blockquote {
   max-width: 900px;
   margin: 2rem auto;
@@ -264,7 +259,6 @@ blockquote footer {
   margin-top: 1rem;
   text-align: right;
   font-weight: 700;
-  /* make footer more readable: high-contrast */
   color: #333333;
   font-family: $font-main;
 }
@@ -282,13 +276,18 @@ blockquote footer {
   margin: 2rem 0;
 }
 
-/* Footer: avoid fixed heights, prefer padding and stacked layout on mobile */
+/* Footer styles */
 .footer {
   padding: 2rem 1.2rem;
-  height: auto; /* remove fixed height */
+  height: auto;
 }
-.footer a { color: #f3f3f3; }
-.footer a:hover { color: #ffffff; text-decoration: underline; }
+.footer a { 
+  color: #f3f3f3; 
+}
+.footer a:hover { 
+  color: #ffffff; 
+  text-decoration: underline; 
+}
 
 @media (max-width: 720px) {
   .footer { display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; }
