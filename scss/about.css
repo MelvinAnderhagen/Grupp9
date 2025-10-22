@@ -9,7 +9,6 @@ body {
   padding: 0;
 }
 
-/* Prevent images from overflowing their containers */
 img {
   max-width: 100%;
   height: auto;
@@ -29,18 +28,16 @@ img {
   margin: -1px;
 }
 
-/* only apply dark background to site header and footer, not to content headers like .history-hero */
 .site-header, .footer {
   background-color: #b81e3b;
   color: #fff;
 }
 
-/* Make top header sticky and ensure it sits above page content */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 40;
-  min-height: 5.2rem; /* give a bit more vertical space */
+  min-height: 5.2rem;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
@@ -55,7 +52,7 @@ main {
 }
 
 section {
-  margin-bottom: 3.6rem; /* more breathing room between sections */
+  margin-bottom: 3.6rem;
   background-color: #fefefe;
   padding: 2.8rem;
   border-radius: 10px;
@@ -72,7 +69,6 @@ section p {
   margin-bottom: 1rem;
 }
 
-/* Make the figure responsive: stack on small screens, two-column (text left, image right) on larger screens */
 figure {
   display: grid;
   grid-template-columns: 1fr;
@@ -80,31 +76,27 @@ figure {
   align-items: center;
 }
 
-/* Larger screens: text left, image right */
 @media (min-width: 720px) {
   figure {
     grid-template-columns: 1fr 320px;
   }
   figure img {
-    justify-self: end; /* push image to the right column */
+    justify-self: end;
     max-width: 320px;
     width: 100%;
     border-radius: 10px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    transform: translateX(8px); /* nudge a bit to the right */
+    object-fit: cover;
+    transform: translateX(8px);
   }
   figure figcaption {
     text-align: left;
   }
 }
-/* Small screens: stacked center */
 figure img {
   max-width: 300px;
   width: 100%;
   border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 figure figcaption {
@@ -151,12 +143,11 @@ figure figcaption {
     grid-template-columns: 1fr;
   }
 }
-/* History section: h2 full width, text + image form columns on larger screens */
 .history {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2.8rem;
-  text-align: center; /* Center everything by default */
+  text-align: center;
 }
 
 .history h2 {
@@ -165,17 +156,16 @@ figure figcaption {
   grid-column: 1/-1;
 }
 
-/* Hero section styling */
 .history-hero {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   align-items: start;
-  justify-items: start; /* Align items to the left */
+  justify-items: start;
   margin-bottom: 3rem;
 }
 .history-hero .hero-text {
-  text-align: left; /* Left-align text */
+  text-align: left;
 }
 .history-hero h1, .history-hero h2 {
   margin: 0 0 0.25rem 0;
@@ -185,15 +175,15 @@ figure figcaption {
   line-height: 1.05;
 }
 .history-hero .tagline {
-  margin: 0 0 2rem 0; /* Add margin bottom to create space before image */
+  margin: 0 0 2rem 0;
   color: #b81e3b;
   opacity: 0.95;
-  font-weight: 600; /* Semi-bold */
+  font-weight: 600;
 }
 .history-hero .history-image {
   max-width: 480px;
   width: 100%;
-  justify-self: start; /* Align image to the left */
+  justify-self: start;
 }
 .history-hero .history-image img {
   display: block;
@@ -202,30 +192,26 @@ figure figcaption {
   border-radius: 10px;
 }
 
-/* Desktop: keep left alignment, just adjust sizing */
 @media (min-width: 720px) {
   .history-hero {
-    max-width: none; /* Remove width constraint */
-    margin: 0 0 3rem 0; /* Remove auto centering */
+    max-width: none;
+    margin: 0 0 3rem 0;
   }
   .history-hero .hero-text {
-    text-align: left; /* Keep left alignment */
-    max-width: 600px; /* Constrain text width for readability */
+    text-align: left;
+    max-width: 600px;
   }
-  .history-hero .history-image {
-    max-width: 520px; /* Larger on desktop */
-    justify-self: start; /* Keep left alignment */
+  .history-hero .hero-text .history-image {
+    max-width: 520px;
+    justify-self: start;
+  }
+  .history-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
   }
 }
-/* Main history content */
-.history-text {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left; /* Left-align the text content */
-}
-
-/* Larger screens: slightly bigger image, maintain left alignment */
-@media (min-width: 880px) {
+@media (min-width: 720px) and (min-width: 880px) {
   .history-hero .hero-text {
     max-width: 700px;
   }
@@ -233,8 +219,7 @@ figure figcaption {
     max-width: 560px;
   }
 }
-/* Very wide screens: maximum size, maintain left alignment */
-@media (min-width: 1100px) {
+@media (min-width: 720px) and (min-width: 1100px) {
   .history-hero .hero-text {
     max-width: 800px;
   }
@@ -242,61 +227,47 @@ figure figcaption {
     max-width: 600px;
   }
 }
-/* Blockquote visual update: slightly darker border and deeper rose tint, author line bolder and different font-weight */
-blockquote {
-  background: linear-gradient(180deg, rgba(184, 30, 59, 0.06), rgba(0, 0, 0, 0.02));
-  border: 1px solid rgba(184, 30, 59, 0.14); /* slightly darker rose border */
+@media (min-width: 720px) {
+  blockquote {
+    background: linear-gradient(180deg, rgba(184, 30, 59, 0.06), rgba(0, 0, 0, 0.02));
+    border: 1px solid rgba(184, 30, 59, 0.14);
+  }
+  blockquote {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem 2.4rem;
+    background: linear-gradient(180deg, rgba(184, 30, 59, 0.08), rgba(0, 0, 0, 0.04));
+    border: 1px solid rgba(184, 30, 59, 0.16);
+    border-radius: 14px;
+    position: relative;
+    color: #222;
+    line-height: 1.7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+  }
+  blockquote::before {
+    content: "“";
+    font-size: 6.5rem;
+    position: absolute;
+    left: 18px;
+    top: -28px;
+    color: #b81e3b;
+    opacity: 0.06;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  blockquote::after {
+    content: "";
+  }
+  blockquote footer {
+    margin-top: 1rem;
+    text-align: right;
+    font-weight: 700;
+    color: #333333;
+    font-family: "Arial", sans-serif;
+  }
 }
-
-blockquote footer {
-  margin-top: 1rem;
-  text-align: right;
-  font-weight: 800; /* bolder author */
-  color: #b81e3b; /* use same rose color for author */
-  font-family: "Arial", sans-serif;
-}
-
-/* Blockquote / quote styling */
-blockquote {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem 2.4rem;
-  background: linear-gradient(180deg, rgba(184, 30, 59, 0.08), rgba(0, 0, 0, 0.04));
-  border: 1px solid rgba(184, 30, 59, 0.16);
-  border-radius: 14px;
-  position: relative;
-  color: #222;
-  line-height: 1.7;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.05rem;
-}
-
-blockquote::before {
-  content: "“";
-  font-size: 6.5rem;
-  position: absolute;
-  left: 18px;
-  top: -28px;
-  color: #b81e3b;
-  opacity: 0.06;
-  font-family: Georgia, serif;
-  line-height: 1;
-}
-
-blockquote::after {
-  content: "";
-}
-
-blockquote footer {
-  margin-top: 1rem;
-  text-align: right;
-  font-weight: 700;
-  /* make footer more readable: high-contrast */
-  color: #333333;
-  font-family: "Arial", sans-serif;
-}
-
-@media (max-width: 600px) {
+@media (min-width: 720px) and (max-width: 600px) {
   blockquote {
     padding: 1.2rem;
     font-size: 1rem;
@@ -307,30 +278,28 @@ blockquote footer {
     top: -18px;
   }
 }
-/* Newsletter styles */
-.newsletter {
-  background-color: #fefefe;
-  padding: 2rem;
-  border-radius: 10px;
-  margin: 2rem 0;
+@media (min-width: 720px) {
+  /* Newsletter styles */
+  .newsletter {
+    background-color: #fefefe;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+  }
+  /* Footer styles */
+  .footer {
+    padding: 2rem 1.2rem;
+    height: auto;
+  }
+  .footer a {
+    color: #f3f3f3;
+  }
+  .footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
 }
-
-/* Footer: avoid fixed heights, prefer padding and stacked layout on mobile */
-.footer {
-  padding: 2rem 1.2rem;
-  height: auto; /* remove fixed height */
-}
-
-.footer a {
-  color: #f3f3f3;
-}
-
-.footer a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-@media (max-width: 720px) {
+@media (min-width: 720px) and (max-width: 720px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -338,122 +307,107 @@ blockquote footer {
     align-items: flex-start;
   }
 }
-.newsletter h2 {
-  color: #b81e3b;
-  margin-bottom: 0.5rem;
+@media (min-width: 720px) {
+  .newsletter h2 {
+    color: #b81e3b;
+    margin-bottom: 0.5rem;
+  }
+  .newsletter p {
+    margin-bottom: 1rem;
+    color: #0a0a0a;
+  }
+  .newsletter ul {
+    margin: 0 0 1rem 1.2rem;
+  }
+  .newsletter-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    align-items: start;
+  }
+  .newsletter-form label {
+    font-size: 0.9rem;
+  }
+  .newsletter-form input[type=text], .newsletter-form input[type=email] {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+  }
+  .newsletter-form .consent {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .newsletter-form fieldset.consent {
+    grid-column: 1/-1;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .newsletter-form .btn-submit {
+    grid-column: 1/-1;
+    background-color: #b81e3b;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .newsletter-form .privacy {
+    grid-column: 1/-1;
+    font-size: 0.85rem;
+    color: #444;
+    margin-top: 0.6rem;
+  }
+  .callout {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-top: 0.8rem;
+    color: #333;
+  }
+  .callout svg {
+    flex: 0 0 20px;
+  }
+  .socialMediaIcons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+  }
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .socialMediaIcons.facebook {
+    color: #1877F2;
+  }
+  .socialMediaIcons.instagram {
+    color: #C13584;
+  }
+  .socialMediaIcons.twitter {
+    color: #1DA1F2;
+  }
+  .socialMediaIcons:hover {
+    filter: brightness(1.05);
+  }
+  .btn-submit {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
 }
-
-.newsletter p {
-  margin-bottom: 1rem;
-  color: #0a0a0a;
-}
-
-.newsletter ul {
-  margin: 0 0 1rem 1.2rem;
-}
-
-.newsletter-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-  align-items: start;
-}
-
-.newsletter-form label {
-  font-size: 0.9rem;
-}
-
-.newsletter-form input[type=text], .newsletter-form input[type=email] {
-  padding: 0.6rem;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-}
-
-.newsletter-form .consent {
-  grid-column: 1/-1;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.newsletter-form fieldset.consent {
-  grid-column: 1/-1;
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.newsletter-form .btn-submit {
-  grid-column: 1/-1;
-  background-color: #b81e3b;
-  color: #fff;
-  padding: 0.8rem 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.newsletter-form .privacy {
-  grid-column: 1/-1;
-  font-size: 0.85rem;
-  color: #444;
-  margin-top: 0.6rem;
-}
-
-.callout {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  margin-top: 0.8rem;
-  color: #333;
-}
-
-.callout svg {
-  flex: 0 0 20px;
-}
-
-.socialMediaIcons {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.socialMediaIcons.facebook {
-  color: #1877F2;
-}
-
-.socialMediaIcons.instagram {
-  color: #C13584;
-}
-
-.socialMediaIcons.twitter {
-  color: #1DA1F2;
-}
-
-.socialMediaIcons:hover {
-  filter: brightness(1.05);
-}
-
-.btn-submit {
-  display: inline-flex;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 600px) {
+@media (min-width: 720px) and (max-width: 600px) {
   .newsletter-form {
     grid-template-columns: 1fr;
   }
-}/*# sourceMappingURL=about.css.map */
+}
+
+/*# sourceMappingURL=about.css.map */

@@ -217,13 +217,13 @@ blockquote {
   border: 1px solid rgba(184,30,59,0.14);
 }
 
-blockquote footer {
-  margin-top: 1rem;
-  text-align: right;
-  font-weight: 800;
-  color: $color-text;
-  font-family: $font-main;
-}
+// blockquote footer {
+//   margin-top: 1rem;
+//   text-align: right;
+//   font-weight: 800;
+//   color: $color-text;
+//   font-family: $font-main;
+// }
 
 blockquote {
   max-width: 900px;
@@ -330,4 +330,5 @@ blockquote footer {
     .btn-submit { display: inline-flex; gap: 0.5rem; align-items: center; justify-content: center; }
 @media (max-width: 600px) {
   .newsletter-form { grid-template-columns: 1fr; }
+}
 }
