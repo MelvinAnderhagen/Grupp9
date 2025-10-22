@@ -1,0 +1,102 @@
+   @use "variables" as*;
+   @use "mixins" as*;
+
+   
+   * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+   body {
+    background-color: #fff6f8;
+    padding: 30px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+   }
+
+   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 100px;
+    background-color: #b81e3b;
+    text-align: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+
+    .headerLogo:hover {
+        color: #b19da1;    
+    }
+    
+    .navMenu {
+        color: white;
+        
+    }
+     .navMenuItem:hover {
+    color: #b19da1;
+    text-decoration: underline;
+
+   }
+
+   }
+
+ 
+//    .navMenuItem:hover {
+//     color: #b19da1;
+//    }
+
+
+   .bookSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));;
+    padding: 20px;
+    margin: 20px;
+    gap: 20px;
+    
+   }
+
+
+.bookCard{
+  background-color:  white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bookTitle {
+    font-size: larger;
+}
+.bookCard:hover {
+    scale: 1.1;
+}
+
+.bookImage {
+    width: 100%;
+    height: 500px;
+    // object-fit: cover;
+    
+
+}
+
+.bookAuthor {
+    font-style: oblique;
+}
+.bookDesc {
+    font-size: small;
+}
+
+footer {
+    color: darkslategray;
+    background-color: rgb(227, 219, 210);
+} 
+
+
+
+// gör en läs mer del i Html och skapa en knapp
