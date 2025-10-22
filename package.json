@@ -1,24 +1,19 @@
 {
-  "name": "grupp9",
+  "name": "parmar-poesi-styles",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "build-css": "sass scss/main.scss css/scss.css --no-source-map && postcss css/tailwind-build.css -o css/main.css",
+  "watch-css": "sass --watch scss/main.scss:css/scss.css --no-source-map",
+    "build-tailwind": "postcss css/tailwind-build.css -o css/main.css",
+    "dev": "npm run build-css --silent"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MelvinAnderhagen/Grupp9.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/MelvinAnderhagen/Grupp9/issues"
-  },
-  "homepage": "https://github.com/MelvinAnderhagen/Grupp9#readme"
-  "dependencies": {
-    "tailwindcss": "^4.1.14"
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.15",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.82.0",
+    "tailwindcss": "^4.1.15"
   }
 }

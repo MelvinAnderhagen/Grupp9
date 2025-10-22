@@ -1,10 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om oss</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pärmar & Poesi — bokhandel i Västerås med poesikvällar, författarsamtal och lokala evenemang.">
+  <title>Om oss - Pärmar & Poesi</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+
+    <!-- Menu -->
+    <ul
+      class="peer-checked:flex hidden absolute md:static right-0 top-12 md:top-auto bg-[#b81e3b] md:bg-transparent flex-col md:flex-row md:flex gap-5 text-xl rounded-lg md:rounded-none shadow-md md:shadow-none p-4 md:p-0"
+    >
+      <li><a href="books.html" class="text-white hover:text-gray-300 hover:underline transition">Böcker</a></li>
+      <li><a href="events.html" class="text-white hover:text-gray-300 hover:underline transition">Evenemang</a></li>
+      <li><a href="about.html" class="text-white hover:text-gray-300 hover:underline transition">Om oss</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <section class="history">
+      <header class="history-hero" aria-labelledby="site-title">
+        <hgroup class="hero-text">
+          <h2 id="site-title">Pärmar &amp; Poesi</h2>
+          <p class="tagline">När du vill upptäcka magin i varje bok och känna dig som hemma i litteraturens värld.</p>
+        </hgroup>
+
+        <figure class="history-image hero-image">
+          <img src="images/victoria.jpg" alt="Bokhandeln Pärmar &amp; Poesi från utsidan">
+        </figure>
+      </header>
+
+      <h2>Vår Historia</h2>
+
+      <article class="history-text">
+        <h3 class="visually-hidden">Vår Historia</h3>
+        <p>Pärmar &amp; Poesi grundades 1987 av Margareta och Lars Lindström med en enkel men kraftfull vision: att skapa en plats där böcker berör och inspirerar. Vad som började som en liten dröm har vuxit till en älskad institution i Stockholms hjärta.</p>
+
+        <p>Idag drivs bokhandeln av nästa generation, men kärleken till litteratur och den personliga servicen förblir densamma. Vi tror på bokens unika förmåga att förvandla liv, öppna nya världar och skapa meningsfulla samtal mellan människor.</p>
+
+        <blockquote>
+          <p>En bok är en dröm som du håller i dina händer. Hos oss hjälper vi dig att hitta just din dröm.</p>
+          <footer>— Margareta Lindström, grundare</footer>
+        </blockquote>
+
+        <p>Vårt noggrant kurerade sortiment speglar vår passion för kvalitetslitteratur inom alla genrer. Från tidlösa klassiker till spännande nyheter, från lokal poesi till internationella bestsellers – hos oss hittar du böcker som berör, inspirerar och förändrar.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2 id="team-heading">Vårt Team</h2>
+      <section class="team-list" aria-labelledby="team-heading">
+        <article>
+          <img src="images/anna.jpg" alt="Mara Delgado, Butikschef">
+          <h3>Mara Delgado</h3>
+          <p>Butikschef</p>
+          <p>mara@parmarpoesi.se</p>
+        </article>
+        <article>
+          <img src="images/john.jpg" alt="Johan Lind, Eventansvarig">
+          <h3>Johan Lind</h3>
+          <p>Eventansvarig</p>
+          <p>johan@parmarpoesi.se</p>
+        </article>
+        <article>
+          <img src="images/maria.jpg" alt="Maria Karlsson, Kundservice">
+          <h3>Maria Karlsson</h3>
+          <p>Kundservice</p>
+          <p>maria@parmarpoesi.se</p>
+        </article>
+      </section>
+    </section>
+    
+    <!-- Newsletter signup -->
+    <section class="newsletter">
+      <h2>Bli medlem i vår bokälskarklubb</h2>
+      <p>Få exklusiva boktips, förhandsinfo om nya titlar och inbjudningar till våra evenemang</p>
+
+      <ul>
+        <li>Personliga bokrekommendationer</li>
+        <li>Förhandsinfo om författarträffar</li>
+        <li>Exklusiva rabatter på utvalda böcker</li>
+        <li>Månatligt nyhetsbrev med boknyheter</li>
+      </ul>
+
+      <form class="newsletter-form" action="#" method="post">
+        <label for="fname">Förnamn</label>
+        <input id="fname" name="fname" type="text" placeholder="Förnamn" required>
+
+        <label for="lname">Efternamn</label>
+        <input id="lname" name="lname" type="text" placeholder="Efternamn">
+
+        <label for="email">E-postadress</label>
+        <input id="email" name="email" type="email" placeholder="namn@exempel.se" required>
+
+        <fieldset class="consent">
+          <legend class="visually-hidden">Samtycke till e-post</legend>
+          <input id="consent" name="consent" type="checkbox" required>
+          <label for="consent">Jag godkänner att Pärmar &amp; Poesi kontaktar mig via e-post med boktips och evenemangsinformation</label>
+        </fieldset>
+
+        <button type="submit" class="btn-submit">Bli medlem nu</button>
+        <aside class="callout" role="note">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 4.5C2 3.67157 2.67157 3 3.5 3H20.5C21.3284 3 22 3.67157 22 4.5V19.5C22 20.3284 21.3284 21 20.5 21H3.5C2.67157 21 2 20.3284 2 19.5V4.5Z" stroke="#b81e3b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 4L12 13L2 4" stroke="#b81e3b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Få nyheter direkt i inkorgen</span>
+        </aside>
+        <p class="privacy">Vi respekterar din integritet. Du kan avsluta prenumerationen när som helst.</p>
+      </form>
+    </section>
+  </main>
+  <!-- end main -->
+
+ 
 </body>
 </html>
