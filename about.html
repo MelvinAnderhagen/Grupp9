@@ -9,26 +9,17 @@
   <link rel="stylesheet" href="css/main.css">
   <title>Om oss - Pärmar & Poesi</title>
 </head>
-<body class="flex flex-col"> 
-    <header class="bg-[#b81e3b] flex justify-between items-center h-20 px-6">
-  <h1 class="text-3xl font-semibold">
-    <a href="index.html" class="text-white hover:text-gray-300 transition">Pärmar och Poesi</a>
+<body> 
+    <header class="site-header">
+  <h1 class="site-logo">
+    <a href="index.html">Pärmar och Poesi</a>
   </h1>
 
-  <!-- Mobile menu toggle -->
-  <nav class="relative">
-    <input type="checkbox" id="menu-toggle" class="hidden peer" />
-    <label for="menu-toggle" class="text-white text-2xl cursor-pointer md:hidden hover:text-gray-300 transition">
-      <i class="fa-solid fa-bars"></i>
-    </label>
-
-    <!-- Menu -->
-    <ul
-      class="peer-checked:flex hidden absolute md:static right-0 top-12 md:top-auto bg-[#b81e3b] md:bg-transparent flex-col md:flex-row md:flex gap-5 text-xl rounded-lg md:rounded-none shadow-md md:shadow-none p-4 md:p-0"
-    >
-      <li><a href="books.html" class="text-white hover:text-gray-300 hover:underline transition">Böcker</a></li>
-      <li><a href="events.html" class="text-white hover:text-gray-300 hover:underline transition">Evenemang</a></li>
-      <li><a href="about.html" class="text-white hover:text-gray-300 hover:underline transition">Om oss</a></li>
+  <nav class="main-nav">
+    <ul class="nav-list">
+      <li><a href="books.html" class="nav-link">Böcker</a></li>
+      <li><a href="events.html" class="nav-link">Evenemang</a></li>
+      <li><a href="about.html" class="nav-link active">Om oss</a></li>
     </ul>
   </nav>
 </header>
@@ -128,27 +119,29 @@
     </section>
   </main>
   <!-- end main -->
-  <footer class="bg-[#b81e3b] flex flex-row justify-evenly items-center flex-wrap">
-        <section class="">
-            <a class="font-semibold text-2xl text-white" href="index.html">Pärmar och Poesi</a>
-        </section>
-        <section class="flex flex-col gap-2 flex-wrap">
-            <p class="font-semibold text-white text-xl">Länkar</p>
-            <ul class="">
-                <li class=""><a class="text-gray-300 text-lg hover:text-gray-700" href="books.html">Böcker</a></li>
-                <li class=""><a class="text-gray-300 text-lg hover:text-gray-700" href="events.html">Evenemang</a></li>
-                <li class=""><a class="text-gray-300 text-lg hover:text-gray-700" href="about.html">Om oss</a></li>
-            </ul>
-        </section>
-        <section class="flex flex-col gap-2 flex-wrap">
-            <p class="text-white font-semibold text-xl">Sociala medier</p>
-            <section class="flex flex-row gap-2">
-                <p class="socialMediaIcons text-gray-300 text-lg hover:text-gray-700 cursor-pointer"><i class="fa-brands fa-facebook-f"></i></p>
-                <p class="socialMediaIcons text-gray-300 text-lg hover:text-gray-700 cursor-pointer"><i class="fa-brands fa-instagram"></i></p>
-                <p class="socialMediaIcons text-gray-300 text-lg hover:text-gray-700 cursor-pointer"><i class="fa-brands fa-twitter"></i></p>
-            </section>
-        </section>
-    </footer>
+  <footer class="footer">
+    <h2 class="footer-logo">
+      <a href="index.html">Pärmar och Poesi</a>
+    </h2>
+    
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <h3>Länkar</h3>
+      <ul>
+        <li><a href="books.html">Böcker</a></li>
+        <li><a href="events.html">Evenemang</a></li>
+        <li><a href="about.html">Om oss</a></li>
+      </ul>
+    </nav>
+    
+    <address class="footer-social">
+      <h3>Sociala medier</h3>
+      <ul>
+        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+      </ul>
+    </address>
+  </footer>
  
 </body>
 </html>

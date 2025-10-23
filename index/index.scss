@@ -7,7 +7,7 @@
     box-sizing: border-box;
     // padding: 0;
     // margin: 0;
-    font-family: "Nato Sans", sans-serif;
+    font-family: "Georgia", "Times New Roman", serif;
 }
 
 .bodyContainer {
@@ -92,7 +92,11 @@
     align-items: center;
     gap: 45px;
 
-    
+    article:hover {
+        animation-name: ScaleUp;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
 
     article {
         display: flex;
@@ -145,8 +149,13 @@
     }
 }
 
-.footer {
-    grid-area: footer;
+@keyframes ScaleUp {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.1;
+    }
 }
 
 @media (max-width: 800px) {

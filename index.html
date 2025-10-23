@@ -32,7 +32,7 @@
   </nav>
 </header>
 
-    <main class="mainContainer">
+    <main class="mainContainer p-6">
         <h1 class="bookSectionTitle">Månadens böcker</h1>
         <section class="bookSection">
             <article class="bookCard">
@@ -77,26 +77,29 @@
         </section>
     </main>
 
-    <footer class="bg-[#b81e3b] flex flex-row justify-evenly items-center h-44 flex-wrap">
-        <section class="">
-            <a class="font-semibold text-2xl text-white" href="index.html">Pärmar och Poesi</a>
+    <footer class="bg-[#b81e3b] flex flex-col md:flex-row justify-evenly items-center p-6 md:p-10 gap-6 md:gap-0">
+        <section>
+            <a class="font-semibold text-2xl text-white hover:text-gray-400" href="index.html">Pärmar och Poesi</a>
         </section>
-        <section class="flex flex-col gap-2 flex-wrap">
+
+        <section class="flex flex-col gap-2 items-start">
             <p class="font-semibold text-white text-xl">Länkar</p>
-            <ul class="">
-                <li class=""><a class="text-gray-300 text-lg hover:text-gray-700" href="books.html">Böcker</a></li>
-                <li class=""><a class="text-gray-300 text-lg hover:text-gray-700" href="events.html">Evenemang</a></li>
-                <li class=""><a class="text-gray-300 text-lg hover:text-gray-700" href="about.html">Om oss</a></li>
+            <ul>
+                <li><a class="text-gray-300 text-lg hover:text-gray-700" href="books.html">Böcker</a></li>
+                <li><a class="text-gray-300 text-lg hover:text-gray-700" href="events.html">Evenemang</a></li>
+                <li><a class="text-gray-300 text-lg hover:text-gray-700" href="about.html">Om oss</a></li>
             </ul>
         </section>
-        <section class="flex flex-col gap-2 flex-wrap">
+
+        <section class="flex flex-col gap-2 items-center md:items-start">
             <p class="text-white font-semibold text-xl">Sociala medier</p>
-            <section class="flex flex-row gap-2">
+            <section class="flex flex-row gap-4">
                 <p class="socialMediaIcons text-gray-300 text-lg hover:text-gray-700 cursor-pointer"><i class="fa-brands fa-facebook-f"></i></p>
                 <p class="socialMediaIcons text-gray-300 text-lg hover:text-gray-700 cursor-pointer"><i class="fa-brands fa-instagram"></i></p>
                 <p class="socialMediaIcons text-gray-300 text-lg hover:text-gray-700 cursor-pointer"><i class="fa-brands fa-twitter"></i></p>
             </section>
         </section>
     </footer>
+
 </body>
 </html>
