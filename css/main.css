@@ -134,7 +134,7 @@ img {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Mobile menu styles */
+
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -154,7 +154,6 @@ img {
   border-radius: 2px;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: flex;
@@ -189,7 +188,7 @@ img {
     border-radius: 8px;
   }
   
-  /* Hamburger animation when active */
+  
   .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
   }

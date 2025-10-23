@@ -1,6 +1,6 @@
 @use 'variables' as *;
 
-// Max width container (minimal mixins per request)
+
 @mixin max-width-container {
   max-width: $max-width;
   margin: 0 auto;

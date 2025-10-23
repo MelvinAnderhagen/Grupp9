@@ -1,10 +1,4 @@
-/* Error: expected "}".
- *     ,
- * 333 | }
- *     |  ^
- *     '
- *   scss\about.scss 333:2  @use
- *   scss\main.scss 3:1     root stylesheet */
+
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",

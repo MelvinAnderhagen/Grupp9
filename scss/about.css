@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* increased for airier layout */
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #fff6f8;
@@ -15,7 +15,7 @@ img {
   display: block;
 }
 
-/* Accessibility helpers */
+
 .visually-hidden {
   position: absolute !important;
   height: 1px;
