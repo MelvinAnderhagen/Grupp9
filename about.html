@@ -151,7 +151,7 @@
   </footer>
 
 <script>
-// Mobile menu toggle functionality
+// Mobile menu toggle 
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mainNav = document.getElementById('main-nav');
@@ -170,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Close menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!mobileMenuToggle.contains(event.target) && !mainNav.contains(event.target)) {
             mobileMenuToggle.classList.remove('active');
