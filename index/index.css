@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
-  font-family: "Nato Sans", sans-serif;
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
 .bodyContainer {
@@ -74,6 +74,11 @@
   align-items: center;
   gap: 45px;
 }
+.eventSection article:hover {
+  animation-name: ScaleUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 .eventSection article {
   display: flex;
   flex-direction: column;
@@ -123,10 +128,14 @@
   background-color: #ff8d8d;
 }
 
-.footer {
-  grid-area: footer;
+@keyframes ScaleUp {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;
+  }
 }
-
 @media (max-width: 800px) {
   .eventSection {
     height: auto;
