@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="eng">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,14 @@
     <a href="index.html">Pärmar och Poesi</a>
   </h1>
 
-  <nav class="main-nav">
+  <!-- Mobile menu toggle -->
+  <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <nav class="main-nav" id="main-nav">
     <ul class="nav-list">
       <li><a href="books.html" class="nav-link">Böcker</a></li>
       <li><a href="events.html" class="nav-link">Evenemang</a></li>
@@ -142,6 +149,36 @@
       </ul>
     </address>
   </footer>
+
+<script>
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    
+    mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuToggle.classList.remove('active');
+            mainNav.classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!mobileMenuToggle.contains(event.target) && !mainNav.contains(event.target)) {
+            mobileMenuToggle.classList.remove('active');
+            mainNav.classList.remove('active');
+        }
+    });
+});
+</script>
  
 </body>
 </html>
